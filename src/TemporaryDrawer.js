@@ -7,8 +7,12 @@ import Divider from '@material-ui/core/Divider';
 import MenuIcon from '@material-ui/icons/Menu';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText'
-import ListSubheader from '@material-ui/core/ListSubheader';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import HomeIcon from '@material-ui/icons/Home';
+import StarIcon from '@material-ui/icons/Star';
+import TableIcon from '@material-ui/icons/FormatListNumbered';
+import FlagIcon from '@material-ui/icons/Flag';
 
 const styles = {
   list: {
@@ -18,6 +22,9 @@ const styles = {
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
+  },
+  listItemText: {
+    fontWeight: "bold",
   },
 };
 
@@ -38,20 +45,33 @@ class TemporaryDrawer extends React.Component {
     const sideList = (
       <div className={classes.list}>
       <List
-       component="nav"
-       subheader={<ListSubheader component="div">Menu</ListSubheader>}>
-        <ListItemText>Início</ListItemText>
-        <ListItemText>Ranking</ListItemText>
-        <ListItemText>Palpites</ListItemText>
-        <ListItemText>Tabela</ListItemText>      
+       component="nav">
+        <ListItem className={classes.listItem} button component="a" href="#inicio" >
+          <ListItemIcon>
+            <HomeIcon/>
+          </ListItemIcon>
+          <ListItemText className={classes.listItemText} inset primary="Início" />
+        </ListItem>
+        <ListItem className={classes.listItem} button component="a" href="#ranking">
+          <ListItemIcon>
+            <StarIcon/>
+          </ListItemIcon>
+          <ListItemText className={classes.listItemText} inset primary="Ranking"/>
+        </ListItem>
+        <ListItem className={classes.listItem} button component="a" href="#palpites">
+          <ListItemIcon>
+            <FlagIcon />
+          </ListItemIcon>
+          <ListItemText className={classes.listItemText} inset primary="Palpites"/>
+        </ListItem>
+        <ListItem className={classes.listItem} button component="a" href="#tabela">
+          <ListItemIcon>
+            <TableIcon/>
+          </ListItemIcon>
+          <ListItemText className={classes.listItemText} inset primary="Tabela"/>
+        </ListItem>      
       </List>
       <Divider />
-      </div>
-    );
-
-    const fullList = (
-      <div className={classes.fullList}>
-        <Divider />
       </div>
     );
 
