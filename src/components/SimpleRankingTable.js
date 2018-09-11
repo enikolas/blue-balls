@@ -1,6 +1,5 @@
 import React from 'react';
 import RankingTable from './RankingTable';
-import './SimpleRankingTable.css';
 
 class SimpleRankingTable extends React.Component {
   render() {

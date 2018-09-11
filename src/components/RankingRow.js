@@ -1,4 +1,5 @@
 import React from 'react';
+import './RankingRow.css';
 
 class RankingRow extends React.Component {
     render() {
@@ -6,7 +7,7 @@ class RankingRow extends React.Component {
       const name = posicao.name;
   
       return (
-        <tr>
+        <tr className="SimpleRow">
           <td>{posicao.position}</td>
           <td>{name}</td>
         </tr>

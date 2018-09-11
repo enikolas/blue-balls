@@ -1,23 +1,27 @@
 import React from 'react';
 import RankingRow from './RankingRow';
+import './RankingTable.css';
 
 class RankingTable extends React.Component {
     render() {
-      const rows = [];
-      
-      this.props.posicoes.forEach((posicao) => {
-        rows.push(
-          <RankingRow
-            posicao={posicao}
-            key={posicao.name} />
-        );
-      });
-  
+			const { posicoes } = this.props;
+			let user = posicoes.filter(posicao => posicao.self === true);
+
+			const rows = posicoes
+				.slice(0,3)
+				.concat(user)
+				.map((posicao) => (
+
+				<RankingRow
+					posicao={posicao}
+					key={posicao.name} />
+			));
+
       return (
         <table className="SimpleTable">
           <thead>
-            <tr className="SimpleTableRow">
-              <th>Posicao</th>
+            <tr>
+              <th>Posição</th>
               <th>Participante</th>
             </tr>
           </thead>
