@@ -1,6 +1,6 @@
 .SimpleTable {
   font-family: "Roboto", "helvetica","sans-serif";
-  width: 90%;
+  width: 100%;
   margin: 10px auto;
 	border-collapse: collapse;
 	line-height: 2.2em;
@@ -17,6 +17,25 @@
 	text-align: left;
 }
 
-.SimpleTable thead tr th:first-child{
-	width: 25%;
+.SimpleTable thead tr th:first-child,
+.SimpleTable thead tr th:nth-last-child(2),
+.SimpleTable thead tr th:last-child{
+	width: 20%;
+}
+@media screen and (max-width: 370px){
+	.SimpleTable thead tr th:nth-last-child(2){
+		display: none;
+	}
+}
+
+@media screen and (max-width: 650px){
+	.SimpleTable thead tr th:last-child{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px){
+	.SimpleTable{
+		width: 1024px;
+	}
 }

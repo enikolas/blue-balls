@@ -22,3 +22,15 @@
 .SimpleRow td{
 	padding-left: 1rem;
 }
+
+@media screen and (max-width: 370px){
+	.SimpleRow td:nth-last-child(2){
+		display: none;
+	}
+}
+
+@media screen and (max-width: 650px){
+	.SimpleRow td:last-child{
+		display: none;
+	}
+}

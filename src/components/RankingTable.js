@@ -23,6 +23,8 @@ class RankingTable extends React.Component {
             <tr>
               <th>Posição</th>
               <th>Participante</th>
+							<th>Pontos</th>
+							<th>Acertos</th>
             </tr>
           </thead>
           <tbody>{rows}</tbody>
