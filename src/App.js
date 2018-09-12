@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SimpleRankingTable from './components/SimpleRankingTable';
+import ButtonAppBar from './ButtonAppBar.js';
 import './App.css';
 
 const POSICOES = [
@@ -16,7 +17,10 @@ const POSICOES = [
 class App extends Component {
   render() {
     return (
-      <SimpleRankingTable posicoes={POSICOES} />
+			<div>
+				<ButtonAppBar/>
+      	<SimpleRankingTable posicoes={POSICOES} />
+			</div>
     );
   }
 }
