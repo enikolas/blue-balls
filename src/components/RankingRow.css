@@ -1,36 +1,36 @@
-.SimpleRow:nth-child(odd){
+.RankingRow:nth-child(odd){
   background-color: #ffffff;
 }
 
-.SimpleRow:first-child{
+.RankingRow:first-child{
   font-weight: bold;
 }
 
-.SimpleRow:last-child{
+.RankingRow:last-child{
 	line-height: 1.5em;
 	border-top: 5px solid #6e7bb7;
 }
 
-.SimpleRow:nth-child(even){
+.RankingRow:nth-child(even){
   background-color: #eeeeee;
 }
 
-.SimpleRow:last-child{
+.RankingRow:last-child{
 	background-color: #a9d0f5;
 }
 
-.SimpleRow td{
+.RankingRow td{
 	padding-left: 1rem;
 }
 
 @media screen and (max-width: 370px){
-	.SimpleRow td:nth-last-child(2){
+	.RankingRow td:nth-last-child(2){
 		display: none;
 	}
 }
 
 @media screen and (max-width: 650px){
-	.SimpleRow td:last-child{
+	.RankingRow td:last-child{
 		display: none;
 	}
 }

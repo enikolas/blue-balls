@@ -1,4 +1,4 @@
-.SimpleTable {
+.RankingTable {
   font-family: "Roboto", "helvetica","sans-serif";
   width: 100%;
   margin: 10px auto;
@@ -6,36 +6,36 @@
 	line-height: 2.2em;
 }
 
-.SimpleTable thead tr {
+.RankingTable thead tr {
 	color: #ffffff;
   background-color: #374147;
 }
 
-.SimpleTable thead tr th{
+.RankingTable thead tr th{
 	padding-left: 1rem;
 	letter-spacing: 1px;
 	text-align: left;
 }
 
-.SimpleTable thead tr th:first-child,
-.SimpleTable thead tr th:nth-last-child(2),
-.SimpleTable thead tr th:last-child{
+.RankingTable thead tr th:first-child,
+.RankingTable thead tr th:nth-last-child(2),
+.RankingTable thead tr th:last-child{
 	width: 20%;
 }
 @media screen and (max-width: 370px){
-	.SimpleTable thead tr th:nth-last-child(2){
+	.RankingTable thead tr th:nth-last-child(2){
 		display: none;
 	}
 }
 
 @media screen and (max-width: 650px){
-	.SimpleTable thead tr th:last-child{
+	.RankingTable thead tr th:last-child{
 		display: none;
 	}
 }
 
 @media screen and (min-width: 1024px){
-	.SimpleTable{
+	.RankingTable{
 		width: 1024px;
 	}
 }

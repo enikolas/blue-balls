@@ -9,7 +9,7 @@ class RankingRow extends React.Component {
 			const acertos = posicao.acertos;
   
       return (
-        <tr className="SimpleRow">
+        <tr className="RankingRow">
           <td>{posicao.position}</td>
           <td>{name}</td>
 					<td>{pontos}</td>

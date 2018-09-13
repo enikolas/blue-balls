@@ -18,7 +18,7 @@ class RankingTable extends React.Component {
 			));
 
       return (
-        <table className="SimpleTable">
+        <table className="RankingTable">
           <thead>
             <tr>
               <th>Posição</th>

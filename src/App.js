@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SimpleRankingTable from './components/SimpleRankingTable';
+import RankingTable from './components/RankingTable';
 import ButtonAppBar from './ButtonAppBar.js';
 import './App.css';
 
@@ -19,7 +19,7 @@ class App extends Component {
     return (
 			<div>
 				<ButtonAppBar/>
-      	<SimpleRankingTable posicoes={POSICOES} />
+      	<RankingTable posicoes={POSICOES} />
 			</div>
     );
   }
