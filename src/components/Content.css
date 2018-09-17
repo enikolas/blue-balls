@@ -1,0 +1,6 @@
+@media screen and (min-width: 1024px){
+	.Content{
+		margin: 0 auto;
+		width: 1024px;
+	}
+}

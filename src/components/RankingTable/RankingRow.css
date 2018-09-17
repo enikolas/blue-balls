@@ -1,0 +1,52 @@
+.RankingRow:nth-child(odd){
+  background-color: #ffffff;
+}
+
+.RankingRow:first-child{
+	font-weight: bold;
+}
+
+.RankingRow:last-child{
+	line-height: 1.5em;
+	border-top: 5px solid #6e7bb7;
+}
+
+.RankingRow:nth-child(even){
+  background-color: #eeeeee;
+}
+
+.RankingRow:last-child{
+	background-color: #a9d0f5;
+}
+
+.RankingRow td{
+	padding-left: 1rem;
+}
+
+.RankingRow:last-child td:first-child {
+	border-radius: 0 0 0 5px;
+}
+
+.RankingRow:last-child td:last-child {
+	border-radius: 0 0 5px 0;
+}
+
+@media screen and (max-width: 370px) {
+	.RankingRow td:nth-last-child(2) {
+		display: none;
+	}
+
+	.RankingRow:last-child td:nth-child(2) {
+		border-radius: 0 0 5px 0;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.RankingRow td:last-child {
+		display: none;
+	}
+
+	.RankingRow:last-child td:nth-last-child(2) {
+		border-radius: 0 0 5px 0;
+	}
+}
