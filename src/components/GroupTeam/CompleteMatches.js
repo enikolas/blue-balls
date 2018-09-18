@@ -2,17 +2,28 @@ import React from 'react';
 import GroupTeam from './GroupTeam';
 import './CompleteMatches.css';
 
+import Palmeiras from './ImageTeam/palmeiras.png'
+import Sport from './ImageTeam/sport.png';
+import Santos from './ImageTeam/santos.png';
+import Corinthians from './ImageTeam/corinthians.png';
+import SaoPaulo from './ImageTeam/sao_paulo.png';
+import Parana from './ImageTeam/parana.png';
+import Gremio from './ImageTeam/gremio.png';
+import Cruzeiro from './ImageTeam/cruzeiro.png';
+import Flamengo from './ImageTeam/flamengo.png';
+import Vitoria from './ImageTeam/vitoria.png';
+
 const GAMES = [
 	{
 		id: 1,
 		homeTeam: {
 			acronym: 'SPO',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2015/07/21/sport65.png',
+			image: Sport,
 			score: 1,
 		},
 		awayTeam: {
 			acronym: 'PAL',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png',
+			image: Palmeiras,
 			score: 3,
 		}
 	},
@@ -20,12 +31,12 @@ const GAMES = [
 		id: 2,
 		homeTeam: {
 			acronym: 'SAN',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2014/04/14/santos_60x60.png',
+			image: Santos,
 			score: 4,
 		},
 		awayTeam: {
 			acronym: 'COR',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2014/04/14/corinthians_60x60.png',
+			image: Corinthians,
 			score: 3,
 		}
 	},
@@ -33,12 +44,12 @@ const GAMES = [
 		id: 3,
 		homeTeam: {
 			acronym: 'SAO',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2014/04/14/sao_paulo_60x60.png',
+			image: SaoPaulo,
 			score: 0,
 		},
 		awayTeam: {
 			acronym: 'PAR',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2014/04/13/parana_60x60.png',
+			image: Parana,
 			score: 0,
 		}
 	},
@@ -46,12 +57,12 @@ const GAMES = [
 		id: 4,
 		homeTeam: {
 			acronym: 'GRE',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2014/04/14/gremio_60x60.png',
+			image: Gremio,
 			score: 2,
 		},
 		awayTeam: {
 			acronym: 'CRU',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2015/04/29/cruzeiro_65.png',
+			image: Cruzeiro,
 			score: 1,
 		}
 	},
@@ -59,26 +70,26 @@ const GAMES = [
 		id: 5,
 		homeTeam: {
 			acronym: 'FLA',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2018/04/09/Flamengo-65.png',
+			image: Flamengo,
 			score: 3,
 		},
 		awayTeam: {
 			acronym: 'VIT',
-			image: 'https://s.glbimg.com/es/sde/f/equipes/2014/04/14/vitoria_60x60.png',
+			image: Vitoria,
 			score: 4,
 		}
 	},
 ];
 
-const CompleteMatches = ({isNextGame}) => {
+const CompleteMatches = ({isScoreVisible}) => {
 
-	const buttonName = isNextGame ? 'Palpitar' : 'Visualizar';
-	const title = isNextGame ? 'Próximos Jogos'	 : 'Últimos Resultados';
+	const buttonName = isScoreVisible ? 'Make your guess' : 'View results';
+	const title = isScoreVisible ? 'Next games'	 : 'Last results';
 
 	return (
 	<div className="CompleteMatches">
-		<div className="CompleteTitle"><h3>{title}</h3></div>
-		<GroupTeam matches={GAMES} isScoreVisible={!isNextGame} />
+		<h2>{title}</h2>
+		<GroupTeam matches={GAMES} isScoreVisible={!isScoreVisible} />
 		<button className="ChoiceScoresButton">{buttonName}</button>
 	</div>
 	)

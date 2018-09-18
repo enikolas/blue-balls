@@ -17,8 +17,8 @@ const POSITIONS = [
 const Content = () => (
 	<div className="Content">
 		<RankingTable positions={POSITIONS} />
-		<CompleteMatches isNextGame={true} />
-		<CompleteMatches isNextGame={false} />
+		<CompleteMatches isScoreVisible={false} />
+		<CompleteMatches isScoreVisible={true} />
 	</div>
 );
 

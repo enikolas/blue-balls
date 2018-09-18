@@ -19,10 +19,10 @@ const RankingTable = ({ positions }) => {
 		<table className="RankingTable">
 			<thead>
 				<tr>
-					<th>Posição</th>
-					<th>Participante</th>
-					<th>Pontos</th>
-					<th>Acertos</th>
+					<th>Position</th>
+					<th>Player</th>
+					<th>Score</th>
+					<th>Hit</th>
 				</tr>
 			</thead>
 			<tbody>{rows}</tbody>
