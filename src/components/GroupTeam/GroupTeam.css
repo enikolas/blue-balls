@@ -1,0 +1,12 @@
+.GroupTeam {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 100%;
+}
+
+@media screen and (max-width: 1000px){
+	.GroupTeam{
+		justify-content: center;
+	}
+}

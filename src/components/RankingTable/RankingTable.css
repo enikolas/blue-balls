@@ -17,14 +17,27 @@
 	text-align: left;
 }
 
+.RankingTable thead tr th:first-child {
+	border-radius: 5px 0 0 0 ;
+}
+
+.RankingTable thead tr th:last-child {
+	border-radius: 0 5px 0 0;
+}
+
 .RankingTable thead tr th:first-child,
 .RankingTable thead tr th:nth-last-child(2),
 .RankingTable thead tr th:last-child{
 	width: 20%;
 }
+
 @media screen and (max-width: 370px){
 	.RankingTable thead tr th:nth-last-child(2){
 		display: none;
+	}
+
+	.RankingTable thead tr th:nth-child(2) {
+		border-radius: 0 5px 0 0;
 	}
 }
 
@@ -32,10 +45,8 @@
 	.RankingTable thead tr th:last-child{
 		display: none;
 	}
-}
 
-@media screen and (min-width: 1024px){
-	.RankingTable{
-		width: 1024px;
+	.RankingTable thead tr th:nth-last-child(2) {
+		border-radius: 0 5px 0 0;
 	}
 }
