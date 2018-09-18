@@ -2,23 +2,21 @@ import React from 'react';
 import Match from './Match';
 import './GroupTeam.css';
 
-const renderMatches = (matches, isScoreVisible) => 
+const renderMatches = (matches, read) => 
 	matches.slice(0,4).map(match => (
 		<Match
 			key={match.id}
-			isScoreVisible={isScoreVisible}
 			homeTeam={match.homeTeam}
 			awayTeam={match.awayTeam}
+			read={read}
 		/>
 	)
 );
 
-const GroupTeam = ({matches, isScoreVisible}) => {
-	return (
-		<div className="GroupTeam">
-			{ renderMatches(matches, isScoreVisible) }
-		</div>
-	);
-};
+const GroupTeam = ({matches, read}) => (
+	<div className="GroupTeam">
+		{ renderMatches(matches, read) }
+	</div>
+);
 
 export default GroupTeam;
