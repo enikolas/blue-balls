@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
 import ButtonAppBar from './components/AppBar/ButtonAppBar';
 import Content from './components/Content';
 import './App.css';
@@ -6,10 +8,12 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-			<div>
-				<ButtonAppBar/>
-      	<Content />
-			</div>
+			<BrowserRouter>
+				<div className="App">
+					<ButtonAppBar/>
+					<Content />
+				</div>
+			</BrowserRouter>	
     );
   }
 }
