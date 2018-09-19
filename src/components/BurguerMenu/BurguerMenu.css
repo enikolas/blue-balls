@@ -1,0 +1,41 @@
+.BurguerMenu {
+	display: initial;
+	height: 58px;
+	padding: 0;
+	padding-left: 1rem;
+	background-color: rgba(0, 0, 0, 0);
+	transition: background-color 0.4s ease;
+}
+
+.BurguerMenu.open {
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: fixed;
+	z-index: 9;
+}
+
+.BurguerMenu button,
+.BurguerMenu button:focus {
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 1em;
+	background: rgba(0,0,0,0);
+	border: none;
+	outline: none;
+	z-index: 5;
+}
+
+.BurguerMenu button::-moz-focus-inner {
+	border: 0;
+}
+
+.BurguerMenu button svg {
+	width: 24px;
+	height: 24px;
+	fill: rgba(255, 255, 255, 0.9);
+}

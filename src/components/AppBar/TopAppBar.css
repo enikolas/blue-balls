@@ -1,0 +1,92 @@
+
+.TopAppBar .DrawerMenu ul {
+  padding: 10px 50px;
+	list-style: none;
+	align-content: center;
+	justify-content: space-around;
+	display: list-item;
+	margin: 80px 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.TopAppBar .DrawerMenu li {
+  list-style-type: none;
+	padding: 0 10px;
+	width: 100%;
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.TopAppBar .DrawerMenu li .icon {
+  display: initial;
+	width: 72px;
+	margin: 0;
+	padding-top: 0.3rem;
+	padding-left: 16px;
+	font-size: 2rem;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.TopAppBar .DrawerMenu a,
+.TopAppBar .DrawerMenu a:link,
+.TopAppBar .DrawerMenu a:visited,
+.TopAppBar .DrawerMenu a:focus,
+.TopAppBar .DrawerMenu a:active {
+	color: #202124 ;
+	text-decoration: none;
+	text-align: left;
+	font-weight: 500;
+	width: calc(100% - 72px);
+	padding: 0.9rem 0;
+	margin: 0;
+	border: none;
+}
+
+.TopAppBar .DrawerMenu a:hover,
+.TopAppBar .DrawerMenu a:selected {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.TopAppBar .DrawerMenu li.selected a {
+	text-decoration: none;
+}
+
+.TopAppBar {
+	width: 100%;
+}
+
+.TopAppBar .DrawerMenu {
+	z-index: 10;
+	width: 80%;
+	max-width: 280px;
+	height: 100%;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	-webkit-transform: translate(-100%, 0);
+	transform: translate(-100%, 0);
+	transition: transform 0.3s ease;
+}
+
+.TopAppBar .DrawerMenu.open {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+	transition: transform 0.3s ease;
+}
+
+.TopAppBar .DrawerMenu li:hover,
+.TopAppBar .DrawerMenu li.selected {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.TopAppBar .DrawerMenu li.selected .icon {
+	color: #76aadb;
+}
+
+.TopAppBar .DrawerMenu li.selected img{
+	fill: currentColor;
+}
+

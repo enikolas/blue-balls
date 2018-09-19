@@ -1,17 +1,17 @@
 import React from 'react';
-import RankingTable from './RankingTable/RankingTable';
-import CompleteMatches from './GroupTeam/CompleteMatches';
 
-import Palmeiras from './GroupTeam/ImageTeam/palmeiras.png';
-import Sport from './GroupTeam/ImageTeam/sport.png';
-import Santos from './GroupTeam/ImageTeam/santos.png';
-import Corinthians from './GroupTeam/ImageTeam/corinthians.png';
-import SaoPaulo from './GroupTeam/ImageTeam/sao_paulo.png';
-import Parana from './GroupTeam/ImageTeam/parana.png';
-import Gremio from './GroupTeam/ImageTeam/gremio.png';
-import Cruzeiro from './GroupTeam/ImageTeam/cruzeiro.png';
-import Flamengo from './GroupTeam/ImageTeam/flamengo.png';
-import Vitoria from './GroupTeam/ImageTeam/vitoria.png';
+import RankingTable from '../RankingTable/RankingTable';
+import CompleteMatches from '../GroupTeam/CompleteMatches';
+import Palmeiras from '../GroupTeam/ImageTeam/palmeiras.png';
+import Sport from '../GroupTeam/ImageTeam/sport.png';
+import Santos from '../GroupTeam/ImageTeam/santos.png';
+import Corinthians from '../GroupTeam/ImageTeam/corinthians.png';
+import SaoPaulo from '../GroupTeam/ImageTeam/sao_paulo.png';
+import Parana from '../GroupTeam/ImageTeam/parana.png';
+import Gremio from '../GroupTeam/ImageTeam/gremio.png';
+import Cruzeiro from '../GroupTeam/ImageTeam/cruzeiro.png';
+import Flamengo from '../GroupTeam/ImageTeam/flamengo.png';
+import Vitoria from '../GroupTeam/ImageTeam/vitoria.png';
 
 const POSITIONS = [
 	{

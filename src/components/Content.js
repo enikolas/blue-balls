@@ -1,7 +1,8 @@
 import React from 'react';
-import './Content.css';
 import { Route } from 'react-router-dom';
-import Home from './Home';
+
+import './Content.css';
+import Home from './Home/Home';
 
 const Content = () => (
 	<div className="Content">
