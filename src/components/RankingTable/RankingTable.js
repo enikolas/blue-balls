@@ -1,19 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import RankingRow from './RankingRow';
 import './RankingTable.css';
 
 const RankingTable = ({ positions }) => {
-	let user = positions.filter(position => position.self === true);
+	const user = positions.filter(position => position.self === true);
 
 	const rows = positions
-		.slice(0,3)
+		.slice(0, 3)
 		.concat(user)
-		.map((position) => (
+		.map(position => (
 
-		<RankingRow
-			position={position}
-			key={position.name} />
-	));
+			<RankingRow
+				position={position}
+				key={position.name}
+			/>
+		));
 
 	return (
 		<table className="RankingTable">
@@ -28,6 +31,13 @@ const RankingTable = ({ positions }) => {
 			<tbody>{rows}</tbody>
 		</table>
 	);
-}
+};
 
-  export default RankingTable;
+export default RankingTable;
+
+RankingTable.propTypes = {
+	positions: PropTypes.arrayOf(PropTypes.shape({
+		self: PropTypes.bool,
+		name: PropTypes.string
+	})).isRequired
+};
