@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './Match.css';
 
 const Match = ({ homeTeam, awayTeam, read }) => (
@@ -14,3 +16,15 @@ const Match = ({ homeTeam, awayTeam, read }) => (
 );
 
 export default Match;
+
+Match.propTypes = {
+	homeTeam: PropTypes.shape({
+		acronym: PropTypes.string,
+		image: PropTypes.object
+	}).isRequired,
+	awayTeam: PropTypes.shape({
+		acronym: PropTypes.string,
+		image: PropTypes.object
+	}).isRequired,
+	read: PropTypes.func.isRequired
+};
