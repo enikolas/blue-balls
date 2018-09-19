@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { prototype } from 'react-transition-group/TransitionGroup';
 
 const MenuItem = ({
-	label, to, icon
+	label, to, path, icon
 }) => {
-	const isSelected = (to.length >= 1) 
+	const isSelected = (to.length >= 1 && to === path);
 	const className = isSelected ? 'selected' : '';
 
 	return (
 		<li className={className}>
-			<img src={icon} alt="Icon"/>
-			<span>{label}</span>
+			<div className="icon">
+				<img src={icon} alt="icon" />
+			</div>
+			<Link to={to}>
+				{label}
+			</Link>
 		</li>
 	);
 };
@@ -22,6 +25,7 @@ export default MenuItem;
 MenuItem.propTypes = {
 	label: PropTypes.string.isRequired,
 	to: PropTypes.string.isRequired,
+	path: PropTypes.string.isRequired,
 	icon: PropTypes.string
 };
 
