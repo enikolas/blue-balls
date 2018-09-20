@@ -32,10 +32,13 @@
 }
 
 @media screen and (max-width: 650px) {
-	table, thead, tbody, th, td, tr {
+	.TopPlayersTable,
+	.TopPlayersTable thead,
+	.TopPlayersTable tbody,
+	.TopPlayersTable th {
 		display: block;
 	}
-	thead tr {
+	.TopPlayersTable thead tr {
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
