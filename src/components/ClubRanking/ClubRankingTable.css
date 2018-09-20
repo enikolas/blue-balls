@@ -1,0 +1,26 @@
+.ClubRankingTable {
+  font-family: "Roboto", "helvetica","sans-serif";
+  width: 100%;
+  margin: 10px auto;
+	border-collapse: collapse;
+	line-height: 2.2em;
+}
+
+.ClubRankingTable thead tr {
+	color: #ffffff;
+  background-color: #374147;
+}
+
+.ClubRankingTable thead tr th{
+	padding-left: 1rem;
+	letter-spacing: 1px;
+	text-align: left;
+}
+
+.ClubRankingTable thead tr th:first-child {
+	border-radius: 5px 0 0 0 ;
+}
+
+.ClubRankingTable thead tr th:last-child {
+	border-radius: 0 5px 0 0;
+}

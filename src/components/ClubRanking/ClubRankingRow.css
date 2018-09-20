@@ -1,0 +1,23 @@
+.ClubRankingRow:nth-child(odd){
+  background-color: #ffffff;
+}
+
+.ClubRankingRow:first-child{
+	font-weight: bold;
+}
+
+.ClubRankingRow:nth-child(even){
+  background-color: #eeeeee;
+}
+
+.ClubRankingRow td{
+	padding-left: 1rem;
+}
+
+.ClubRankingRow:last-child td:first-child {
+	border-radius: 0 0 0 5px;
+}
+
+.ClubRankingRow:last-child td:last-child {
+	border-radius: 0 0 5px 0;
+}
