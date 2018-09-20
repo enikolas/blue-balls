@@ -32,10 +32,12 @@
 }
 
 @media screen and (max-width: 650px) {
-	.TopPlayersTable,
-	.TopPlayersTable thead,
+	.TopPlayersTable table,
+	.TopPlayersTable thead, 
 	.TopPlayersTable tbody,
-	.TopPlayersTable th {
+	.TopPlayersTable th,
+	.TopPlayersTable td,
+	.TopPlayersTable tr {
 		display: block;
 	}
 	.TopPlayersTable thead tr {

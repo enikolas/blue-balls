@@ -32,11 +32,11 @@
 }
 
 @media screen and (max-width: 650px) {
-	td {
+  .TopPlayersRow td {
 		padding-left: 2rem;
 		margin-left: 4rem;
 	}
-	td:before {
+	.TopPlayersRow td:before {
 		position: absolute;
 		left: 0.325rem;
 		margin-right: 0.325rem;
