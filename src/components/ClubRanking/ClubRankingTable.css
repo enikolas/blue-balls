@@ -6,6 +6,10 @@
 	line-height: 2.2em;
 }
 
+.Short {
+	display: none;
+}
+
 .ClubRankingTable thead tr {
 	color: #ffffff;
   background-color: #374147;
@@ -23,4 +27,31 @@
 
 .ClubRankingTable thead tr th:last-child {
 	border-radius: 0 5px 0 0;
+}
+
+@media screen and (max-width: 800px) {
+	.ClubRankingTable thead tr th:nth-last-child(3),
+	.ClubRankingTable thead tr th:nth-last-child(2) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.ClubRankingTable thead tr th:first {
+		content: counter('Pos');
+	}
+
+	.Full {
+		display: none;
+	}
+
+	.Short {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 525px) {
+	.ClubRankingTable thead tr th:last-child {
+		display: none;
+	}
 }

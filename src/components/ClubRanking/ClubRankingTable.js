@@ -17,13 +17,31 @@ const ClubRankingTable = ({ clubrank }) => {
 		<table className="ClubRankingTable">
 			<thead>
 				<tr>
-					<th>Position</th>
+					<th>
+						<div className="Full">Position</div>
+						<div className="Short">Pos</div>
+					</th>
 					<th>Club</th>
-					<th>Points</th>
-					<th>Played</th>
-					<th>Won</th>
-					<th>Drawn</th>
-					<th>Lost</th>
+					<th>
+						<div className="Full">Points</div>
+						<div className="Short">Pts</div>
+					</th>
+					<th>
+						<div className="Full">Played</div>
+						<div className="Short">Pl</div>
+					</th>
+					<th>
+						<div className="Full">Won</div>
+						<div className="Short">W</div>
+					</th>
+					<th>
+						<div className="Full">Drawn</div>
+						<div className="Short">D</div>
+					</th>
+					<th>
+						<div className="Full">Lost</div>
+						<div className="Short">L</div>
+					</th>
 					<th>GF</th>
 					<th>GA</th>
 					<th>GD</th>
