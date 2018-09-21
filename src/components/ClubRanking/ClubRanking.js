@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ClubRankingTable from './ClubRankingTable';
+import './ClubRanking.css';
 
 const CLUBSRANK = [
 	{
@@ -31,6 +32,7 @@ const CLUBSRANK = [
 
 const ClubRanking = () => (
 	<div className="ClubRanking">
+		<h1>Club ranking</h1>
 		<ClubRankingTable clubrank={CLUBSRANK} />
 	</div>
 );
