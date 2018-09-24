@@ -15,10 +15,18 @@
 	font-weight: 500;
 }
 
-.GuessMatch input[type="text"]{
+.GuessMatch img {
+	width: 3.5rem;
+	height: 3.5rem;
+}
+
+.GuessMatch input[type="number"]{
 	border: 1px solid #cccccc;
 	border-radius: 4px;
 	text-align: center;
+	padding: 1.5rem 0.5rem;
+	width: 4rem;
+	font-size: 2rem;
 }
 
 
@@ -45,18 +53,6 @@
 		min-width: 150px;
 		display: none;
 	}	
-
-	.GuessMatch input[type="text"]{
-		padding: 1.5rem 0.5rem;
-		width: 4rem;
-		font-size: 2rem;
-	}
-
-	.GuessMatch img {
-		width: 3.5rem;
-		height: 3.5rem;
-	}
-
 }
 
 @media screen and (max-width: 750px) {

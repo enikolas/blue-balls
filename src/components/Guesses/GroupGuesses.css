@@ -2,4 +2,48 @@
 	margin: 0 auto;
 }
 
+.GroupGuesses .Round{
+	border-radius: 5px 5px 0 0;
+	padding: 0.2rem 0;
+	font-weight: 500;
+	background-color: #3f51b5;
+	color: white;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.LeftArrow {
+	float: left;
+}
+
+.RightArrow {
+	float: right;
+}
+
+.Round {
+	margin: 0 auto;
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+
+@media screen and (max-width: 750px) {
+	.Round {
+		min-width: 100%;
+	}	
+}
+
+@media screen and (min-width: 751px) and (max-width: 1023px){
+	.Round {
+		min-width: 750px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.Round {
+		width: 1024px;
+	}
+}
+
 

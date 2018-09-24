@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import GuessMatch from './GuessMatch';
+import LeftArrow from '../AppBar/Icons/leftArrowIcon.svg';
+import RightArrow from '../AppBar/Icons/rightArrowIcon.svg';
 import './GroupGuesses.css';
 
 const renderGuesses = (guesses, read) => guesses.map(guess => (
@@ -15,6 +17,15 @@ const renderGuesses = (guesses, read) => guesses.map(guess => (
 
 const GroupGuesses = ({ guesses, read }) => (
 	<div className="GroupGuesses">
+		<h2 className="Round">
+			<a href="previousRound">
+				<img className="LeftArrow" src={LeftArrow} alt="Left Arrow" />
+			</a>
+			<span>Round</span>
+			<a href="nextRound">
+				<img className="RightArrow" src={RightArrow} alt="Right Arrow" />
+			</a>
+		</h2>
 		{ renderGuesses(guesses, read) }
 	</div>
 );
