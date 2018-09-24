@@ -1,0 +1,45 @@
+.TopPlayersRow:nth-child(odd){
+  background-color: #ffffff;
+}
+
+.TopPlayersRow:first-child{
+	font-weight: bold;
+}
+
+.TopPlayersRow.user{
+	line-height: 1.5em;
+}
+
+.TopPlayersRow:nth-child(even){
+  background-color: #eeeeee;
+}
+
+.TopPlayersRow.user{
+	background-color: #a9d0f5;
+}
+
+.TopPlayersRow td{
+	padding-left: 1rem;
+}
+
+.TopPlayersRow:last-child td:first-child {
+	border-radius: 0 0 0 5px;
+}
+
+.TopPlayersRow:last-child td:last-child {
+	border-radius: 0 0 5px 0;
+}
+
+@media screen and (max-width: 650px) {
+  .TopPlayersRow td {
+		padding-left: 2rem;
+		margin-left: 4rem;
+	}
+	.TopPlayersRow td:before {
+		position: absolute;
+		left: 0.325rem;
+		margin-right: 0.325rem;
+		content: attr(data);
+		font-weight: bold;
+	}
+}

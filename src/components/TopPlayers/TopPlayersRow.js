@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './RankingRow.css';
+import './TopPlayersRow.css';
 
-const RankingRow = ({ position }) => {
+const TopPlayersRow = ({ position }) => {
 	const name = position.name.split(' ', 1);
 	const {
 		score,
@@ -11,18 +11,18 @@ const RankingRow = ({ position }) => {
 	} = position;
 
 	return (
-		<tr className={`RankingRow ${position.self ? 'user' : ''}`}>
-			<td>{position.position}</td>
-			<td>{name}</td>
-			<td>{score}</td>
-			<td>{correct}</td>
+		<tr className={`TopPlayersRow ${position.self ? 'user' : ''}`}>
+			<td data="Position">{position.position}</td>
+			<td data="Player">{name}</td>
+			<td data="Score">{score}</td>
+			<td data="Correct">{correct}</td>
 		</tr>
 	);
 };
 
-export default RankingRow;
+export default TopPlayersRow;
 
-RankingRow.propTypes = {
+TopPlayersRow.propTypes = {
 	position: PropTypes.shape({
 		position: PropTypes.number,
 		name: PropTypes.string,

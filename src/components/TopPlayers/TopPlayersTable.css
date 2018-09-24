@@ -1,0 +1,48 @@
+.TopPlayersTable {
+  font-family: "Roboto", "helvetica","sans-serif";
+  width: 100%;
+  margin: 10px auto;
+	border-collapse: collapse;
+	line-height: 2.2em;
+}
+
+.TopPlayersTable thead tr {
+	color: #ffffff;
+  background-color: #374147;
+}
+
+.TopPlayersTable thead tr th{
+	padding-left: 1rem;
+	letter-spacing: 1px;
+	text-align: left;
+}
+
+.TopPlayersTable thead tr th:first-child {
+	border-radius: 5px 0 0 0 ;
+}
+
+.TopPlayersTable thead tr th:last-child {
+	border-radius: 0 5px 0 0;
+}
+
+.TopPlayersTable thead tr th:first-child,
+.TopPlayersTable thead tr th:nth-last-child(2),
+.TopPlayersTable thead tr th:last-child{
+	width: 20%;
+}
+
+@media screen and (max-width: 650px) {
+	.TopPlayersTable table,
+	.TopPlayersTable thead, 
+	.TopPlayersTable tbody,
+	.TopPlayersTable th,
+	.TopPlayersTable td,
+	.TopPlayersTable tr {
+		display: block;
+	}
+	.TopPlayersTable thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+}
