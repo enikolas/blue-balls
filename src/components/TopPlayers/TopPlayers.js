@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TopPlayersTable from './TopPlayersTable';
+import './TopPlayers.css';
 
 const POSITIONS = [
 	{
@@ -31,6 +32,7 @@ const POSITIONS = [
 
 const TopPlayers = () => (
 	<div className="TopPlayers">
+		<h1>Top players ranking</h1>
 		<TopPlayersTable positions={POSITIONS} />
 	</div>
 );

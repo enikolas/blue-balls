@@ -1,0 +1,61 @@
+.ClubRankingRow:nth-child(odd){
+  background-color: #ffffff;
+}
+
+.ClubRankingRow:first-child{
+	font-weight: bold;
+}
+
+.ClubRankingRow:nth-child(even){
+  background-color: #eeeeee;
+}
+
+.ClubRankingRow td{
+	padding-left: 1rem;
+}
+
+.ClubRankingRow:last-child td:first-child {
+	border-radius: 0 0 0 5px;
+}
+
+.ClubRankingRow:last-child td:last-child {
+	border-radius: 0 0 5px 0;
+}
+
+.ClubRankingRow:nth-child(1) td:first-child,
+.ClubRankingRow:nth-child(2) td:first-child,
+.ClubRankingRow:nth-child(3) td:first-child,
+.ClubRankingRow:nth-child(4) td:first-child,
+.ClubRankingRow:nth-child(5) td:first-child,
+.ClubRankingRow:nth-child(6) td:first-child {
+	color: #008000;
+}
+
+.ClubRankingRow:nth-child(7) td:first-child,
+.ClubRankingRow:nth-child(8) td:first-child,
+.ClubRankingRow:nth-child(9) td:first-child,
+.ClubRankingRow:nth-child(10) td:first-child,
+.ClubRankingRow:nth-child(11) td:first-child,
+.ClubRankingRow:nth-child(12) td:first-child {
+	color: #ffa500;
+}
+
+.ClubRankingRow:nth-last-child(1) td:first-child,
+.ClubRankingRow:nth-last-child(2) td:first-child,
+.ClubRankingRow:nth-last-child(3) td:first-child,
+.ClubRankingRow:nth-last-child(4) td:first-child {
+	color: #b21d21;
+}
+
+@media screen and (max-width: 800px) {
+	.ClubRankingRow td:nth-last-child(3),
+	.ClubRankingRow td:nth-last-child(2) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 525px) {
+	.ClubRankingRow td:last-child {
+		display: none;
+	}
+}
