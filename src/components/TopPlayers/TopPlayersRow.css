@@ -8,7 +8,6 @@
 
 .TopPlayersRow.user{
 	line-height: 1.5em;
-	border-top: 5px solid #6e7bb7;
 }
 
 .TopPlayersRow:nth-child(even){
