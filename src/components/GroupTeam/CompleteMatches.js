@@ -21,11 +21,11 @@ CompleteMatches.propTypes = {
 		id: PropTypes.number.isRequired,
 		homeTeam: PropTypes.shape({
 			acronym: PropTypes.string,
-			image: PropTypes.object
+			image: PropTypes.string
 		}).isRequired,
 		awayTeam: PropTypes.shape({
 			acronym: PropTypes.string,
-			image: PropTypes.object
+			image: PropTypes.string
 		}).isRequired
 	})).isRequired,
 	title: PropTypes.string.isRequired,
