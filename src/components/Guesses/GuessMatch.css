@@ -1,0 +1,74 @@
+.GuessMatch {
+	width: 70%;
+	text-align: center;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-around;
+	margin: 5px;
+	padding: 1rem;
+	border: 1px solid #cccccc;
+	border-bottom: 0;
+}
+
+.GuessMatch .acronym {
+	font-weight: 500;
+}
+
+.GuessMatch img {
+	width: 3.5rem;
+	height: 3.5rem;
+}
+
+.GuessMatch input[type="number"]{
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	text-align: center;
+	padding: 1.5rem 0.5rem;
+	width: 4rem;
+	font-size: 2rem;
+}
+
+
+.homeScore, .awayScore {
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.GuessMatch .x {
+	font-size: 0.7rem;
+}
+
+.GuessMatch:first-child {
+	border-radius: 5px 5px 0 0 ;
+}
+
+.GuessMatch:last-child {
+	border-bottom: 1px solid #cccccc;
+	border-radius: 0 0 5px 5px;
+}
+
+@media screen and (max-width: 525px) {
+	.GuessMatch .acronym {
+		min-width: 150px;
+		display: none;
+	}	
+}
+
+@media screen and (max-width: 750px) {
+	.GuessMatch {
+		min-width: 100%;
+	}	
+}
+
+@media screen and (min-width: 751px) and (max-width: 1023px){
+	.GuessMatch {
+		min-width: 750px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.GuessMatch {
+		width: 1024px;
+	}
+}

@@ -20,11 +20,11 @@ export default Match;
 Match.propTypes = {
 	homeTeam: PropTypes.shape({
 		acronym: PropTypes.string,
-		image: PropTypes.object
+		image: PropTypes.string
 	}).isRequired,
 	awayTeam: PropTypes.shape({
 		acronym: PropTypes.string,
-		image: PropTypes.object
+		image: PropTypes.string
 	}).isRequired,
 	read: PropTypes.func.isRequired
 };
