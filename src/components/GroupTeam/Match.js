@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import crestHandler from '../../utils/crestHandler';
 
+import crestHandler from '../../utils/crestHandler';
 import './Match.css';
 
 const Match = ({ homeTeam, awayTeam, read }) => (

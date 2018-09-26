@@ -34,7 +34,7 @@ const GAMES = [
 	{
 		id: 1,
 		homeTeam: {
-			acronym: 'SPO',
+			acronym: 'CAM',
 			score: 1
 		},
 		awayTeam: {
@@ -67,7 +67,7 @@ const GAMES = [
 	{
 		id: 4,
 		homeTeam: {
-			acronym: 'GRE',
+			acronym: 'FLU',
 			score: 2
 		},
 		awayTeam: {
@@ -118,14 +118,14 @@ const GUESSES = [
 			guess: 0
 		},
 		awayTeam: {
-			acronym: 'PAR',
+			acronym: 'INT',
 			guess: 0
 		}
 	},
 	{
 		id: 4,
 		homeTeam: {
-			acronym: 'GRE',
+			acronym: 'FLU',
 			guess: null
 		},
 		awayTeam: {
