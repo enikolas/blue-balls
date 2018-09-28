@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import GroupTeam from './GroupTeam';
 import './CompleteMatches.css';
@@ -10,7 +11,9 @@ const CompleteMatches = ({
 	<div className="CompleteMatches">
 		<h2>{title}</h2>
 		<GroupTeam matches={matchArray} read={read} />
-		<button type="submit">{label}</button>
+		<Link to="/guesses">
+			<button type="submit">{label}</button>
+		</Link>
 	</div>
 );
 

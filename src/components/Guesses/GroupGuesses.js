@@ -6,29 +6,38 @@ import LeftArrow from '../AppBar/Icons/leftArrowIcon.svg';
 import RightArrow from '../AppBar/Icons/rightArrowIcon.svg';
 import './GroupGuesses.css';
 
-const renderGuesses = (guesses, read) => guesses.map(guess => (
+const renderGuesses = (guesses, read, round) => guesses.map(guess => (
 	<GuessMatch
 		key={guess.id}
 		homeTeam={guess.homeTeam}
 		awayTeam={guess.awayTeam}
 		read={read}
+		round={round}
 	/>
 ));
 
-const GroupGuesses = ({ guesses, read }) => (
+const GroupGuesses = ({
+	guesses,
+	read,
+	round,
+	nextHandler,
+	previousHandler
+}) => (
+
 	<div className="GroupGuesses">
 		<h2 className="Round">
-			<a href="previousRound">
+			<button type="button" onClick={previousHandler}>
 				<img className="LeftArrow" src={LeftArrow} alt="Left Arrow" />
-			</a>
-			<span>Round</span>
-			<a href="nextRound">
+			</button>
+			<span>{`Round: ${round}`}</span>
+			<button type="button" onClick={nextHandler}>
 				<img className="RightArrow" src={RightArrow} alt="Right Arrow" />
-			</a>
+			</button>
 		</h2>
-		{ renderGuesses(guesses, read) }
+		{ renderGuesses(guesses, read, round) }
 	</div>
 );
+
 
 export default GroupGuesses;
 
@@ -44,5 +53,8 @@ GroupGuesses.propTypes = {
 			image: PropTypes.string
 		}).isRequired
 	})).isRequired,
-	read: PropTypes.func.isRequired
+	read: PropTypes.func.isRequired,
+	round: PropTypes.number.isRequired,
+	nextHandler: PropTypes.func.isRequired,
+	previousHandler: PropTypes.func.isRequired
 };
