@@ -6,16 +6,20 @@ import LeftArrow from '../AppBar/Icons/leftArrowIcon.svg';
 import RightArrow from '../AppBar/Icons/rightArrowIcon.svg';
 import './GroupGuesses.css';
 
-const renderGuesses = (guesses, read) => guesses.map(guess => (
+
+const GameMatch = (games, id) => games.filter(game => (game.id === id));
+
+const renderGuesses = (guesses, read, games) => guesses.map(guess => (
 	<GuessMatch
 		key={guess.id}
 		homeTeam={guess.homeTeam}
 		awayTeam={guess.awayTeam}
+		games={GameMatch(games, guess.id)}
 		read={read}
 	/>
 ));
 
-const GroupGuesses = ({ guesses, read }) => (
+const GroupGuesses = ({ guesses, read, games }) => (
 	<div className="GroupGuesses">
 		<h2 className="Round">
 			<a href="previousRound">
@@ -26,7 +30,7 @@ const GroupGuesses = ({ guesses, read }) => (
 				<img className="RightArrow" src={RightArrow} alt="Right Arrow" />
 			</a>
 		</h2>
-		{ renderGuesses(guesses, read) }
+		{ renderGuesses(guesses, read, games) }
 	</div>
 );
 
@@ -44,5 +48,6 @@ GroupGuesses.propTypes = {
 			image: PropTypes.string
 		}).isRequired
 	})).isRequired,
-	read: PropTypes.func.isRequired
+	read: PropTypes.func.isRequired,
+	games: PropTypes.array.isRequired
 };

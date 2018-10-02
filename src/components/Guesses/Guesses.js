@@ -3,27 +3,85 @@ import React from 'react';
 import GroupGuesses from './GroupGuesses';
 import './Guesses.css';
 
-const GUESSES = [
+const GAMES = [
 	{
 		id: 1,
 		homeTeam: {
 			acronym: 'SPO',
-			guess: null
+			score: 1
 		},
 		awayTeam: {
 			acronym: 'INT',
-			guess: null
+			score: 3
 		}
 	},
 	{
 		id: 2,
 		homeTeam: {
 			acronym: 'SAN',
-			guess: null
+			score: 4
 		},
 		awayTeam: {
 			acronym: 'COR',
-			guess: null
+			score: 3
+		}
+	},
+	{
+		id: 3,
+		homeTeam: {
+			acronym: 'SAO',
+			score: 0
+		},
+		awayTeam: {
+			acronym: 'PAR',
+			score: 0
+		}
+	},
+	{
+		id: 4,
+		homeTeam: {
+			acronym: 'FLU',
+			score: 3
+		},
+		awayTeam: {
+			acronym: 'CRU',
+			score: 3
+		}
+	},
+	{
+		id: 5,
+		homeTeam: {
+			acronym: 'FLA',
+			score: 3
+		},
+		awayTeam: {
+			acronym: 'VIT',
+			score: 4
+		}
+	}
+];
+
+const GUESSES = [
+	{
+		id: 1,
+		homeTeam: {
+			acronym: 'SPO',
+			guess: 1
+		},
+		awayTeam: {
+			acronym: 'INT',
+			guess: 3
+		}
+	},
+	{
+		id: 2,
+		homeTeam: {
+			acronym: 'SAN',
+			guess: 1
+		},
+		awayTeam: {
+			acronym: 'COR',
+			guess: 4
 		}
 	},
 	{
@@ -41,22 +99,22 @@ const GUESSES = [
 		id: 4,
 		homeTeam: {
 			acronym: 'FLU',
-			guess: null
+			guess: 3
 		},
 		awayTeam: {
 			acronym: 'CRU',
-			guess: null
+			guess: 3
 		}
 	},
 	{
 		id: 5,
 		homeTeam: {
 			acronym: 'FLA',
-			guess: null
+			guess: 2
 		},
 		awayTeam: {
 			acronym: 'VIT',
-			guess: null
+			guess: 1
 		}
 	}
 ];
@@ -67,7 +125,7 @@ const Guesses = () => {
 	return (
 		<div className="Guesses">
 			<h1>Make your guess</h1>
-			<GroupGuesses guesses={GUESSES} read={readGuess} />
+			<GroupGuesses guesses={GUESSES} games={GAMES} read={readGuess} />
 		</div>
 	);
 };

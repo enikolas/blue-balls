@@ -27,6 +27,42 @@ const CLUBSRANK = [
 	},
 	{
 		position: 8, team: 'Corinthians', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 9, team: 'Santos', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 10, team: 'Fluminense', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 11, team: 'Atletico-PR', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 12, team: 'Botafogo', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 13, team: 'America-MG', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 14, team: 'Bahia', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 15, team: 'Ceara', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 16, team: 'Vasco', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 17, team: 'Vitoria', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 18, team: 'Sport', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 19, team: 'Parana', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
+	},
+	{
+		position: 20, team: 'Chapecoense', score: 33, games: 25, wins: 9, draw: 6, loses: 10, goalsfor: 27, goalsagainst: 22, goalsdifference: 5
 	}
 ];
 
