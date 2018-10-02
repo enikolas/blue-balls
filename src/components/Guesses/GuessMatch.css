@@ -29,6 +29,13 @@
 	font-size: 2rem;
 }
 
+.GuessMatch .groupResults {
+	margin: 0;
+}
+
+.GuessMatch .groupResults .score {
+	margin: 5px;
+}
 
 .homeScore, .awayScore {
 	width: 1.6rem;
