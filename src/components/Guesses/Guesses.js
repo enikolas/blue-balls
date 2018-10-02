@@ -236,7 +236,6 @@ const PREVIOUS_GUESSES = [
 		}
 	}
 ];
-
 class Guesses extends React.Component {
 	constructor() {
 		super();
