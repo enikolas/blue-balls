@@ -12,7 +12,7 @@ const CompleteMatches = ({
 		<h2>{title}</h2>
 		<GroupTeam matches={matchArray} read={read} />
 		<Link to="/guesses">
-			<button type="submit">{label}</button>
+			<span>{label}</span>
 		</Link>
 	</div>
 );
