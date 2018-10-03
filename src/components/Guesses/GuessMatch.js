@@ -4,13 +4,33 @@ import PropTypes from 'prop-types';
 import crestHandler from '../../utils/crestHandler';
 import './GuessMatch.css';
 
+const renderGameResult = (gameHomeTeam, gameAwayTeam, correct) => {
+	if (gameHomeTeam != null && gameAwayTeam != null) {
+		return (
+			<p className={`score ${correct ? 'correct' : 'incorrect'}`}>
+				{`${gameHomeTeam} x ${gameAwayTeam}`}
+			</p>
+		);
+	}
+
+	return <p />;
+};
+
 const GuessMatch = ({
-	homeTeam, awayTeam, game, read
+	homeTeam,
+	awayTeam,
+	game: {
+		homeTeam: {
+			score: gameHomeTeam
+		},
+		awayTeam: {
+			score: gameAwayTeam
+		}
+	},
+	read
 }) => {
 	const currentHomeScore = read(homeTeam) != null ? read(homeTeam) : '';
 	const currentAwayScore = read(awayTeam) != null ? read(awayTeam) : '';
-	const gameHomeTeam = game.homeTeam.score;
-	const gameAwayTeam = game.awayTeam.score;
 	const correct = (gameAwayTeam === currentAwayScore) && (gameHomeTeam === currentHomeScore);
 
 	return (
@@ -27,9 +47,7 @@ const GuessMatch = ({
 			/>
 			<div className="groupResults">
 				<p className="x">X</p>
-				<p className={`score ${correct ? 'correct' : 'incorrect'}`}>
-					{`${gameHomeTeam != null ? `${gameHomeTeam} x ` : ''}${gameAwayTeam != null ? gameAwayTeam : ''}`}
-				</p>
+				{renderGameResult(gameHomeTeam, gameAwayTeam, correct)}
 			</div>
 			<input
 				type="number"

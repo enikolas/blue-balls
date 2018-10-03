@@ -8,7 +8,7 @@ const GAMES = [
 		id: 1,
 		homeTeam: {
 			acronym: 'SPO',
-			score: 1
+			score: 0
 		},
 		awayTeam: {
 			acronym: 'INT',
@@ -30,7 +30,7 @@ const GAMES = [
 		id: 3,
 		homeTeam: {
 			acronym: 'SAO',
-			score: 0
+			score: 2
 		},
 		awayTeam: {
 			acronym: 'PAR',
@@ -139,7 +139,7 @@ const PREVIOUS_GAMES = [
 		},
 		awayTeam: {
 			acronym: 'COR',
-			score: 3
+			score: 0
 		}
 	},
 	{
