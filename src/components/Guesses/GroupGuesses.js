@@ -11,7 +11,7 @@ const renderGuesses = (guesses, read, round, games) => guesses.map(guess => (
 		key={guess.id}
 		homeTeam={guess.homeTeam}
 		awayTeam={guess.awayTeam}
-		games={games.find(game => game.id === guess.id)}
+		game={games.find(game => game.id === guess.id)}
 		read={read}
 		round={round}
 	/>
@@ -30,7 +30,7 @@ const GroupGuesses = ({
 			<button type="button" onClick={previousHandler}>
 				<img className="LeftArrow" src={LeftArrow} alt="Left Arrow" />
 			</button>
-			<span>{`Round: ${round}`}</span>
+			{`Round: ${round}`}
 			<button type="button" onClick={nextHandler}>
 				<img className="RightArrow" src={RightArrow} alt="Right Arrow" />
 			</button>
@@ -47,15 +47,25 @@ GroupGuesses.propTypes = {
 		id: PropTypes.number.isRequired,
 		homeTeam: PropTypes.shape({
 			acronym: PropTypes.string,
-			image: PropTypes.string
+			score: PropTypes.number
 		}).isRequired,
 		awayTeam: PropTypes.shape({
 			acronym: PropTypes.string,
-			image: PropTypes.string
+			score: PropTypes.number
+		}).isRequired
+	})).isRequired,
+	games: PropTypes.arrayOf(PropTypes.shape({
+		id: PropTypes.number.isRequired,
+		homeTeam: PropTypes.shape({
+			acronym: PropTypes.string,
+			score: PropTypes.number
+		}).isRequired,
+		awayTeam: PropTypes.shape({
+			acronym: PropTypes.string,
+			score: PropTypes.number
 		}).isRequired
 	})).isRequired,
 	read: PropTypes.func.isRequired,
-	games: PropTypes.array.isRequired,
 	round: PropTypes.number.isRequired,
 	nextHandler: PropTypes.func.isRequired,
 	previousHandler: PropTypes.func.isRequired

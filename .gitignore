@@ -24,9 +24,5 @@ yarn.lock
 package-lock.json
 
 .vscode
-<<<<<<< HEAD
 .env
 
-=======
-.env
->>>>>>> 758d09d3184f1832f0ce4bb2dbc9f070a30c879c
