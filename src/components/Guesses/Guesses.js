@@ -61,6 +61,122 @@ const GAMES = [
 	}
 ];
 
+const NEXT_GAMES = [
+	{
+		id: 6,
+		homeTeam: {
+			acronym: 'SPO',
+			score: null
+		},
+		awayTeam: {
+			acronym: 'INT',
+			score: null
+		}
+	},
+	{
+		id: 7,
+		homeTeam: {
+			acronym: 'SAN',
+			score: null
+		},
+		awayTeam: {
+			acronym: 'COR',
+			score: null
+		}
+	},
+	{
+		id: 8,
+		homeTeam: {
+			acronym: 'SAO',
+			score: null
+		},
+		awayTeam: {
+			acronym: 'PAR',
+			score: null
+		}
+	},
+	{
+		id: 9,
+		homeTeam: {
+			acronym: 'FLU',
+			score: null
+		},
+		awayTeam: {
+			acronym: 'CRU',
+			score: null
+		}
+	},
+	{
+		id: 10,
+		homeTeam: {
+			acronym: 'FLA',
+			score: null
+		},
+		awayTeam: {
+			acronym: 'VIT',
+			score: null
+		}
+	}
+];
+
+const PREVIOUS_GAMES = [
+	{
+		id: 11,
+		homeTeam: {
+			acronym: 'SPO',
+			score: 1
+		},
+		awayTeam: {
+			acronym: 'INT',
+			score: 3
+		}
+	},
+	{
+		id: 12,
+		homeTeam: {
+			acronym: 'SAN',
+			score: 4
+		},
+		awayTeam: {
+			acronym: 'COR',
+			score: 3
+		}
+	},
+	{
+		id: 13,
+		homeTeam: {
+			acronym: 'SAO',
+			score: 0
+		},
+		awayTeam: {
+			acronym: 'PAR',
+			score: 0
+		}
+	},
+	{
+		id: 14,
+		homeTeam: {
+			acronym: 'FLU',
+			score: 3
+		},
+		awayTeam: {
+			acronym: 'CRU',
+			score: 3
+		}
+	},
+	{
+		id: 15,
+		homeTeam: {
+			acronym: 'FLA',
+			score: 3
+		},
+		awayTeam: {
+			acronym: 'VIT',
+			score: 4
+		}
+	}
+];
+
 const GUESSES = [
 	{
 		id: 1,
@@ -118,8 +234,6 @@ const GUESSES = [
 		}
 	}
 ];
-
-const readGuess = match => match.guess;
 
 const NEXT_GUESSES = [
 	{
@@ -236,6 +350,8 @@ const PREVIOUS_GUESSES = [
 		}
 	}
 ];
+
+const readGuess = match => match.guess;
 class Guesses extends React.Component {
 	constructor() {
 		super();
@@ -245,6 +361,7 @@ class Guesses extends React.Component {
 
 		this.state = {
 			guesses: GUESSES,
+			games: GAMES,
 			round: 11
 		};
 	}
@@ -252,6 +369,7 @@ class Guesses extends React.Component {
 	nextHandler() {
 		this.setState({
 			guesses: NEXT_GUESSES,
+			games: NEXT_GAMES,
 			round: 12
 		});
 	}
@@ -259,12 +377,13 @@ class Guesses extends React.Component {
 	previousHandler() {
 		this.setState({
 			guesses: PREVIOUS_GUESSES,
+			games: PREVIOUS_GAMES,
 			round: 10
 		});
 	}
 
 	render() {
-		const { guesses, round } = this.state;
+		const { guesses, round, games } = this.state;
 		const { nextHandler, previousHandler } = this;
 
 		return (
@@ -274,7 +393,7 @@ class Guesses extends React.Component {
 					guesses={guesses}
 					read={readGuess}
 					round={round}
-					games={GAMES}
+					games={games}
 					nextHandler={nextHandler}
 					previousHandler={previousHandler}
 				/>

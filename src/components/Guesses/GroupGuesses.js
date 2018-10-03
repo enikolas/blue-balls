@@ -6,14 +6,12 @@ import LeftArrow from '../AppBar/Icons/leftArrowIcon.svg';
 import RightArrow from '../AppBar/Icons/rightArrowIcon.svg';
 import './GroupGuesses.css';
 
-const GameMatch = (games, id) => games.filter(game => (game.id === id));
-
 const renderGuesses = (guesses, read, round, games) => guesses.map(guess => (
 	<GuessMatch
 		key={guess.id}
 		homeTeam={guess.homeTeam}
 		awayTeam={guess.awayTeam}
-		games={GameMatch(games, guess.id)}
+		games={games.find(game => game.id === guess.id)}
 		read={read}
 		round={round}
 	/>
