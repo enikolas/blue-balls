@@ -5,29 +5,30 @@ import './ClubRankingRow.css';
 
 const ClubRankingRow = ({ clubrank }) => {
 	const {
+		position,
 		team,
-		score,
-		games,
-		wins,
+		points,
+		playedGames,
+		won,
 		draw,
-		loses,
-		goalsfor,
-		goalsagainst,
-		goalsdifference
+		lost,
+		goalsFor,
+		goalsAgainst,
+		goalDifference
 	} = clubrank;
 
 	return (
 		<tr className="ClubRankingRow">
-			<td>{clubrank.position}</td>
+			<td>{position}</td>
 			<td>{team}</td>
-			<td>{score}</td>
-			<td>{games}</td>
-			<td>{wins}</td>
+			<td>{points}</td>
+			<td>{playedGames}</td>
+			<td>{won}</td>
 			<td>{draw}</td>
-			<td>{loses}</td>
-			<td>{goalsfor}</td>
-			<td>{goalsagainst}</td>
-			<td>{goalsdifference}</td>
+			<td>{lost}</td>
+			<td>{goalsFor}</td>
+			<td>{goalsAgainst}</td>
+			<td>{goalDifference}</td>
 		</tr>
 	);
 };
