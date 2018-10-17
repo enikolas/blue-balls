@@ -13,6 +13,11 @@
 	margin-bottom: 0;
 }
 
+.GroupGuesses button{
+	border: none;
+	background-color: #3f51b5;
+	outline: none;
+}
 .LeftArrow {
 	float: left;
 }

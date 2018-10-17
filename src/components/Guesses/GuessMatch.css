@@ -37,6 +37,14 @@
 	margin: 5px;
 }
 
+.GuessMatch .correct {
+	color: #20a332;
+}
+
+.GuessMatch .incorrect {
+	color: #d12323;
+}
+
 .homeScore, .awayScore {
 	width: 1.6rem;
 	height: 1.6rem;
